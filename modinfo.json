@@ -1,0 +1,17 @@
+{
+  "$schema": "https://moddbcdn.vintagestory.at/schema/modinfo.latest.json",
+  "type": "Code",
+  "modid": "zerolosscharcoal",
+  "name": "Zero Loss Charcoal",
+  "authors": [
+    "harukadev"
+  ],
+  "description": "Zero Loss Charcoal ensures that no charcoal is lost when a charcoal furnace finishes burning.",
+  "version": "1.0.0",
+  "side": "Universal",
+  "dependencies": {
+    "game": "1.21.0"
+  },
+  "website": "https://harukadev.com/projects/zerolosscharcoal",
+  "iconPath": "modicon.png"
+}
