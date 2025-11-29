@@ -83,7 +83,7 @@ No client installation is required.
 | Contribution                   | Author                            |
 |--------------------------------|-----------------------------------|
 | Original concept               | BillyGalbreath (*NoCharcoalLost*) |
-| Complete rewrite & maintenance | **harukadev**                     |
+| Complete rewrite & maintenance | **HarukaYamamoto0**                     |
 
 Original repository reference:
 [https://github.com/BillyGalbreath/VS-NoCharcoalLost](https://github.com/BillyGalbreath/VS-NoCharcoalLost)
