@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="420" src="https://raw.githubusercontent.com/harukadev/ZeroLossCharcoal/main/modicon.png" alt="Zero Loss Charcoal logo"/>
+  <img width="250" height="250" src="./modicon.png" alt="Zero Loss Charcoal logo"/>
 </p>
 
 <h1 align="center">Zero Loss Charcoal</h1>
