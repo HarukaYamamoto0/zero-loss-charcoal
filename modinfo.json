@@ -7,7 +7,7 @@
     "harukadev"
   ],
   "description": "Zero Loss Charcoal ensures that no charcoal is lost when a charcoal furnace finishes burning.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "side": "Universal",
   "dependencies": {
     "game": "1.21.0"
