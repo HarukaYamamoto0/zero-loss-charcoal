@@ -1,27 +1,39 @@
 {
   "profiles": {
-    "Client": {
+    "Client 1.20": {
       "commandName": "Executable",
       "executablePath": "dotnet",
-      "commandLineArgs": "\"$(VINTAGE_STORY)/Vintagestory.dll\" --tracelog --addModPath \"$(ProjectDir)/bin/$(Configuration)/Mods\"",
+      "commandLineArgs": "\"$(VINTAGE_STORY)/Vintagestory.dll\" --tracelog --addModPath \"$(ProjectDir)artifacts/$(Configuration)/Mods/net7.0\"",
       "workingDirectory": "$(VINTAGE_STORY)"
     },
-    "Server": {
+    "Server 1.20": {
       "commandName": "Executable",
       "executablePath": "dotnet",
-      "commandLineArgs": "\"$(VINTAGE_STORY)/VintagestoryServer.dll\" --tracelog --addModPath \"$(ProjectDir)/bin/$(Configuration)/Mods\"",
+      "commandLineArgs": "\"$(VINTAGE_STORY)/VintagestoryServer.dll\" --tracelog --addModPath \"$(ProjectDir)artifacts/$(Configuration)/Mods/net7.0\"",
       "workingDirectory": "$(VINTAGE_STORY)"
     },
-    "Test World": {
+    "Test World (Flat) 1.20": {
       "commandName": "Executable",
       "executablePath": "dotnet",
-      "commandLineArgs": "\"$(VINTAGE_STORY)/Vintagestory.dll\" --tracelog --addModPath \"$(ProjectDir)/bin/$(Configuration)/Mods\" --playStyle \"preset-surviveandbuild\" --openWorld \"$(ProjectName) Test World\"",
+      "commandLineArgs": "\"$(VINTAGE_STORY)/Vintagestory.dll\" --addModPath \"$(ProjectDir)artifacts/$(Configuration)/Mods/net7.0\" --playStyle \"creativebuilding\" --openWorld \"$(ProjectName) Test World (Flat)\"",
       "workingDirectory": "$(VINTAGE_STORY)"
     },
-    "Test World (Flat)": {
+    "Client 1.21": {
       "commandName": "Executable",
       "executablePath": "dotnet",
-      "commandLineArgs": "\"$(VINTAGE_STORY)/Vintagestory.dll\" --tracelog --addModPath \"$(ProjectDir)/bin/$(Configuration)/Mods\" --playStyle \"creativebuilding\" --openWorld \"$(ProjectName) Test World (Flat)\"",
+      "commandLineArgs": "\"$(VINTAGE_STORY)/Vintagestory.dll\" --tracelog --addModPath \"$(ProjectDir)artifacts/$(Configuration)/Mods/net8.0\"",
+      "workingDirectory": "$(VINTAGE_STORY)"
+    },
+    "Server 1.21": {
+      "commandName": "Executable",
+      "executablePath": "dotnet",
+      "commandLineArgs": "\"$(VINTAGE_STORY)/VintagestoryServer.dll\" --tracelog --addModPath \"$(ProjectDir)artifacts/$(Configuration)/Mods/net8.0\"",
+      "workingDirectory": "$(VINTAGE_STORY)"
+    },
+    "Test World (Flat) 1.21": {
+      "commandName": "Executable",
+      "executablePath": "dotnet",
+      "commandLineArgs": "\"$(VINTAGE_STORY)/Vintagestory.dll\" --addModPath \"$(ProjectDir)artifacts/$(Configuration)/Mods/net8.0\" --playStyle \"creativebuilding\" --openWorld \"$(ProjectName) Test World (Flat)\"",
       "workingDirectory": "$(VINTAGE_STORY)"
     }
   }
