@@ -1,0 +1,46 @@
+# Build Vintage Story Mod (.NET 7 / .NET 8)
+
+name: Build Mod
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        include:
+          - tfm: net7.0
+            dotnet: 7.0.x
+          - tfm: net8.0
+            dotnet: 8.0.x
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build (${{ matrix.tfm }})
+        run: |
+          dotnet build \
+            -c Release \
+            -f ${{ matrix.tfm }} \
+            --no-restore
+
+      - name: Upload build artifact (${{ matrix.tfm }})
+        uses: actions/upload-artifact@v4
+        with:
+          name: zero-loss-charcoal-${{ matrix.tfm }}
+          path: artifacts/Release/Mods/${{ matrix.tfm }}

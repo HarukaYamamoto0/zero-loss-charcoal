@@ -10,8 +10,7 @@
         <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
         <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
-
-<!--        <BaseOutputPath>$(MSBuildProjectDirectory)/artifacts/</BaseOutputPath>-->
+        
         <OutputPath>artifacts/$(Configuration)/Mods/$(TargetFramework)/</OutputPath>
         <ReleaseDir>$(ProjectDir)Releases</ReleaseDir>
     </PropertyGroup>
