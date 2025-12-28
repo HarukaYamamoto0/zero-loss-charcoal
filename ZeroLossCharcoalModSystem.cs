@@ -55,16 +55,8 @@ public class ZeroLossCharcoalSystem : ModSystem
         {
             return;
         }
-
-        var ba = api.World.BlockAccessor;
+        
         var pitPos = __instance.Pos;
-
-        // Clear the center block if it is still a charcoalpile*
-        var centerBlock = ba.GetBlock(pitPos);
-        if (IsCharcoalPile(centerBlock))
-        {
-            ba.SetBlock(0, pitPos); // air
-        }
 
         // Build a map charcoalpile-1..MaxPileHeight -> BlockId
         var pileIds = BuildCharcoalPileIdMap(api, _config.MaxPileHeight);
