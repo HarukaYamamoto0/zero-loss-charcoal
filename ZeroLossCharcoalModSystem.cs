@@ -14,7 +14,7 @@ public class ZeroLossCharcoalSystem : ModSystem
 {
     private Harmony? _harmony;
 
-    private static ZeroLossCharcoalConfig _config = new ZeroLossCharcoalConfig();
+    private static ZeroLossCharcoalConfig _config = new();
 
     private const string ModLogPrefix = "[ZeroLossCharcoal]";
 

@@ -16,7 +16,8 @@
 ## 🌑 Overview
 
 **Zero Loss Charcoal guarantees that no charcoal is ever lost when a pit finishes burning.**
-After conversion, the mod scans the entire structure and upgrades every `charcoalpile-*` to full height — ensuring perfect yield with **zero randomness**.
+After conversion, the mod scans the entire structure and upgrades every `charcoalpile-*` to full height — ensuring
+perfect yield with **zero randomness**.
 
 This is a **complete rewrite** inspired by *NoCharcoalLost* (BillyGalbreath).
 No source code reused — only the idea preserved and modernized.
@@ -83,7 +84,7 @@ No client installation is required.
 | Contribution                   | Author                            |
 |--------------------------------|-----------------------------------|
 | Original concept               | BillyGalbreath (*NoCharcoalLost*) |
-| Complete rewrite & maintenance | **HarukaYamamoto0**                     |
+| Complete rewrite & maintenance | **HarukaYamamoto0**               |
 
 Original repository reference:
 [https://github.com/BillyGalbreath/VS-NoCharcoalLost](https://github.com/BillyGalbreath/VS-NoCharcoalLost)

@@ -10,7 +10,6 @@ obj/
 out/
 publish/
 *.pdb
-*.dll
 *.deps.json
 *.runtimeconfig.json
 *.xml
