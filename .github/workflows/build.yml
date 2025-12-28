@@ -1,10 +1,10 @@
-# Build Vintage Story Mod (.NET 7 / .NET 8)
-
-name: Build Mod
+name: Build & Release Vintage Story Mod
 
 on:
   push:
     branches: [ "main" ]
+    tags:
+      - "v*"
   pull_request:
     branches: [ "main" ]
 
@@ -29,7 +29,7 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet }}
 
-      - name: Restore dependencies
+      - name: Restore
         run: dotnet restore
 
       - name: Build (${{ matrix.tfm }})
@@ -39,8 +39,27 @@ jobs:
             -f ${{ matrix.tfm }} \
             --no-restore
 
-      - name: Upload build artifact (${{ matrix.tfm }})
+      - name: Upload build artifacts (${{ matrix.tfm }})
         uses: actions/upload-artifact@v4
         with:
-          name: zero-loss-charcoal-${{ matrix.tfm }}
-          path: artifacts/Release/Mods/${{ matrix.tfm }}
+          name: build-${{ matrix.tfm }}
+          path: Releases/*.zip
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: release-assets
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            release-assets/**/**/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
